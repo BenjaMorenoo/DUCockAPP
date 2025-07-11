@@ -1,7 +1,17 @@
 import customtkinter as ctk
 from mods_downloader import descargar_mods, descargar_neoforge
 from updater import verificar_actualizacion, mostrar_changelog
-from PIL import Image  # Importamos Pillow para manejar imágenes
+from PIL import Image
+import sys
+import os
+
+# Función para obtener ruta absoluta a recursos, compatible con PyInstaller
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS  # Carpeta temporal de PyInstaller
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 # Configuración inicial
 ctk.set_appearance_mode("Dark")
@@ -15,8 +25,9 @@ class DUCockLauncherApp(ctk.CTk):
         self.geometry("600x400")
         self.resizable(False, False)
 
-        # Cargar la imagen con Pillow
-        image = Image.open("assets/background.png")
+        # Cargar la imagen usando resource_path
+        image_path = resource_path("assets/background.png")
+        image = Image.open(image_path)
 
         # Fondo con imagen
         self.background_image = ctk.CTkImage(light_image=image, size=(600, 400))

@@ -31,7 +31,7 @@ mods = [
     "wthit-neo-12.5.1.jar"
 ]
 
-base_url = "https://github.com/BenjaMorenoo/DUCockLauncherFiles/raw/main/"
+base_url = "https://github.com/BenjaMorenoo/DUCockAPP/raw/main/"
 
 def descargar_mods():
     try:
