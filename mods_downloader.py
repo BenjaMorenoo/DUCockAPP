@@ -32,6 +32,7 @@ mods = [
 ]
 
 base_url = "https://github.com/BenjaMorenoo/DUCockAPP/raw/main/"
+mods_url = "https://github.com/BenjaMorenoo/DUCockAPP/tree/main/mods"
 
 def descargar_mods():
     try:
@@ -41,7 +42,7 @@ def descargar_mods():
 
         for mod in mods:
             print(f"Descargando {mod}...")
-            response = requests.get(base_url + mod)
+            response = requests.get(mods_url + mod)
             if response.status_code == 200:
                 with open(mods_dir / mod, 'wb') as f:
                     f.write(response.content)
