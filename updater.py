@@ -4,7 +4,7 @@ import webbrowser
 from tkinter import messagebox
 
 version_actual = "1.0.0"
-version_file_url = "https://github.com/BenjaMorenoo/DUCockLauncherFiles/raw/main/version.json"
+version_file_url = "https://github.com/BenjaMorenoo/DUCockAPP/raw/main/version.json"
 
 def verificar_actualizacion():
     try:
