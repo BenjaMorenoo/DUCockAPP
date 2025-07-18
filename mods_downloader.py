@@ -28,7 +28,8 @@ mods = [
     "storagedelight-24.12.15-1.21-neoforge.jar",
     "u_team_core-neoforge-1.21.1-5.6.2.354.jar",
     "useful_backpacks-neoforge-1.21.1-3.0.2.128.jar",
-    "wthit-neo-12.5.1.jar"
+    "wthit-neo-12.5.1.jar",
+    "voicechat-neoforge-1.21.1-2.5.34.jar"
 ]
 
 base_url = "https://github.com/BenjaMorenoo/DUCockAPP/raw/main/"
